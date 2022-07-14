@@ -94,7 +94,7 @@
 }
 
 .carousel {
-  margin-top: 350px;
+  padding-top: 350px;
 
   &__inner {
     margin: 0 -7px;
@@ -150,11 +150,10 @@
 }
 
 .services {
-  padding-top: 100px;
+  padding-top: 250px;
 
   &__inner {
     display: flex;
-    margin-bottom: 100px;
   }
 
   &__content {
@@ -245,4 +244,546 @@
   position: absolute;
   right: -65px;
   top: 20px;
+}
+
+.benefits {
+  padding-top: 250px;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    max-width: 300px;
+  }
+
+  &__item {
+    margin-bottom: 27px;
+    padding-right: 26px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+    position: relative;
+    text-align: right;
+  }
+
+  &__item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $dark;
+    right: 0;
+    bottom: 6px;
+  }
+
+  &__item:nth-child(1),
+  &__item:nth-child(7) {
+    margin-right: 10px;
+  }
+
+  &__item:nth-child(2),
+  &__item:nth-child(6) {
+    margin-right: 60px;
+  }
+
+  &__item:nth-child(3),
+  &__item:nth-child(5) {
+    margin-right: 110px;
+  }
+
+  &__item:nth-child(4) {
+    margin-right: 160px;
+  }
+
+  &__content {
+    max-width: 300px;
+    text-align: right;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    text-align: right;
+  }
+
+  &__text+&__text {
+    max-width: 267px;
+    margin-left: auto;
+  }
+}
+
+.video-popup {
+  background-color: $yellow;
+  text-transform: uppercase;
+  color: $black;
+  padding: 6px 34px 6px 64px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  height: 65px;
+  width: 200px;
+  position: relative;
+}
+
+.video-popup::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/popup.svg");
+  top: 20px;
+  left: 25px;
+}
+
+.reviews {
+  margin-top: 250px;
+  padding: 100px 0;
+  background-color: $dark;
+  color: $white;
+
+  &__title {
+    color: $white;
+  }
+
+  &__title::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: $white;
+    position: absolute;
+    top: 27px;
+    margin-left: 20px;
+  }
+
+  &__slider {
+    text-align: center;
+  }
+
+  &__item {
+    border: 1px solid $yellow;
+    padding: 45px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 270px;
+    min-height: 350px;
+    text-align: center;
+    margin-right: 30px;
+  }
+
+  &__name {
+    margin-bottom: 40px;
+    font-weight: $fw-500;
+    font-size: 24px;
+    line-height: 36px;
+    color: $white;
+    display: block;
+  }
+
+  &__slider .slick-dots button {
+    background-color: $yellow;
+    border: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 0;
+    cursor: pointer;
+  }
+
+  &__slider .slick-active button {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__slider .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+  }
+
+  &__slider button {
+    margin: 0 5px;
+    line-height: 12px;
+  }
+}
+
+.contacts {
+  padding-top: 250px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__item_title {
+    color: $accent;
+  }
+
+  &__form {
+    background-color: $dark;
+    padding: 50px 75px 57px;
+    text-align: center;
+  }
+
+  &__title {
+    color: $white;
+    margin-bottom: 16px;
+    margin-left: 53px;
+    text-align: left;
+  }
+
+  &__title::after {
+    background-color: $white;
+  }
+
+  &__input {
+    background-color: transparent;
+    width: 450px;
+    height: 75px;
+    color: $white;
+    border: 1px solid $white;
+    margin-bottom: 12px;
+    display: block;
+    font-size: 24px;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  &__input::placeholder {
+    font-family: $oswald, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    color: $gray;
+  }
+
+  &__btn {
+    border: none;
+    color: $black;
+    margin-top: 78px;
+    cursor: pointer;
+  }
+}
+
+.footer {
+  background-color: $dark;
+
+  &__inner {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+  }
+}
+
+@media(max-width: 1200px) {
+  .header__images {
+    width: 70%;
+    right: 70px;
+    bottom: -222;
+  }
+
+  .benefits__images {
+    width: 40%;
+  }
+
+  .services__item:hover {
+    width: 450px;
+  }
+}
+
+
+
+@media(max-width: 992px) {
+  .header {
+  
+    &__title {
+      font-size: 54px;
+      line-height: 74px;
+    }
+  
+    &__subtitle {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  
+    &__social {
+      padding: 30px 0 20px 53px;
+    }
+  }
+  
+  .phone {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .services {
+
+    &__inner {
+      flex-wrap: wrap;
+    }
+
+    &__list {
+      order: -1;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    &__item {
+      width: 100%;
+    }
+
+    &__item:hover {
+      width: 100%;
+    }
+
+    &__content {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .benefits {
+    &__content {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 30px;
+    }
+
+    &__items {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    &__images {
+      width: 60%;
+      margin-bottom: 65px;
+    }
+
+    &__text {
+      text-align: center;
+    }
+
+    &__text+&__text {
+      width: 100%;
+      margin-left: 0;
+      max-width: 600px;
+    }
+    .video-popup {
+      margin: 0 auto;
+    }
+  }
+
+  .contacts {
+   
+    &__inner {
+      display: block;
+      text-align: center;
+    }
+  
+    &__list {
+      margin-bottom: 30px;
+    }
+  
+    &__input {
+      width: 100%;
+    }
+  
+    &__btn {
+      margin-bottom: 20px;
+    }
+  
+    &__info-title {
+      text-align: center;
+    }
+  
+    &__title {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+}
+
+
+
+@media(max-width: 768px) {
+  .header {
+    &__images {
+      position: static;
+      width: 100%;
+      &:hover {
+        transform: translate(0, 0);
+      }
+    }
+  }
+  .carousel,
+  .services,
+  .benefits,
+  .contacts {
+    padding-top: 100px;
+  }
+  .carousel__img {
+    width: 100%;
+  }
+  .benefits {
+    &__images {
+      width: 70%;
+      margin-bottom: 0;
+    }
+
+    &__item {
+      margin-right: 0;
+      text-align: left;
+      padding-right: 0;
+      padding-left: 26px;
+    }
+
+    &__item::after {
+      right: auto;
+      left: 0;
+    }
+
+    &__list {
+      width: 100%;
+    }
+  }
+  .reviews {
+    margin-top: 100px;
+  }
+  .footer {
+    &__inner {
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+      padding: 20px 0;
+      text-align: center;
+    }
+  
+    &__social {
+      width: 100%;
+      justify-content: center;
+      margin: 25px 0;
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .title:after {
+    display: none;
+  }
+
+  body {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .header {
+    &__content {
+      padding-top: 0;
+      text-align: center;
+    }
+
+    &__social {
+      padding: 30px 0 20px 0;
+    }
+  }
+
+  .social {
+    justify-content: center;
+  }
+
+  .services {
+    padding-top: 150px;
+
+    &__item::before {
+      top: 5px;
+    }
+
+    &__content {
+      text-align: center;
+    }
+  }
+}
+
+@media(max-width: 480px) {
+  .header {
+    &__top {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    &__title {
+      margin-bottom: 20px;
+      font-size: 44px;
+      line-height: 50px;
+    }
+  }
+
+  .logo {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .services {
+    padding-top: 75px;
+
+    &__item {
+      padding: 10px 15px 10px 60px;
+    }
+
+    &__item::before {
+      left: 11px;
+    }
+  }
+
+  .button--decor::before {
+    right: -50px;
+  }
+
+  .button--decor::after {
+    margin-left: 110px;
+  }
+
+  .button--decor::before,
+  .button--decor::after {
+    display: none;
+  }
+
+  .services__inner,
+  .benefits,
+  .carousel {
+    margin-bottom: 50px;
+  }
+
+  .carousel .slick-dots button {
+    width: 10px;
+  }
+
+  .contacts__form {
+    padding: 50px 10px 57px;
+  }
 }
