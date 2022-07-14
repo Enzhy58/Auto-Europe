@@ -91,10 +91,19 @@
   &__item {
     margin: 0 5px;
   }
+  &__img {
+    width: 25px;
+    height: 25px;
+    fill: $white;
+    transition: all 0.3s;
+    &:hover {
+      fill: $yellow;
+    }
+  }
 }
 
 .carousel {
-  padding-top: 350px;
+  padding-top: 300px;
 
   &__inner {
     margin: 0 -7px;
@@ -150,7 +159,7 @@
 }
 
 .services {
-  padding-top: 250px;
+  padding-top: 124px;
 
   &__inner {
     display: flex;
@@ -247,7 +256,7 @@
 }
 
 .benefits {
-  padding-top: 250px;
+  padding-top: 124px;
 
   &__items {
     display: flex;
@@ -339,7 +348,7 @@
 }
 
 .reviews {
-  margin-top: 250px;
+  margin-top: 124px;
   padding: 100px 0;
   background-color: $dark;
   color: $white;
@@ -372,7 +381,6 @@
     max-width: 270px;
     min-height: 350px;
     text-align: center;
-    margin-right: 30px;
   }
 
   &__name {
@@ -414,7 +422,7 @@
 }
 
 .contacts {
-  padding-top: 250px;
+  padding-top: 124px;
 
   &__inner {
     display: flex;
@@ -632,11 +640,8 @@
       }
     }
   }
-  .carousel,
-  .services,
-  .benefits,
-  .contacts {
-    padding-top: 100px;
+  .carousel {
+    padding-top: 80px;
   }
   .carousel__img {
     width: 100%;
@@ -663,9 +668,7 @@
       width: 100%;
     }
   }
-  .reviews {
-    margin-top: 100px;
-  }
+
   .footer {
     &__inner {
       flex-direction: column;
@@ -715,8 +718,13 @@
     justify-content: center;
   }
 
+    .services,
+    .benefits,
+    .contacts {
+      padding-top: 80px;
+    }
+
   .services {
-    padding-top: 150px;
 
     &__item::before {
       top: 5px;
@@ -726,6 +734,9 @@
       text-align: center;
     }
   }
+    .reviews {
+      margin-top: 80px;
+    }
 }
 
 @media(max-width: 480px) {
@@ -747,9 +758,15 @@
     margin-bottom: 20px;
     width: 100%;
   }
+    .carousel,
+    .services,
+    .benefits,
+    .contacts {
+      padding-top: 50px;
+    }
 
   .services {
-    padding-top: 75px;
+
 
     &__item {
       padding: 10px 15px 10px 60px;
@@ -786,4 +803,8 @@
   .contacts__form {
     padding: 50px 10px 57px;
   }
+    .reviews {
+      margin-top: 50px;
+      padding: 40px 0;
+    }
 }
