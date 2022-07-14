@@ -46,3 +46,69 @@ body {
   top: 27px;
   margin-left: 20px;
 }
+
+.phone {
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: $fw-400;
+}
+
+.button {
+  display: block;
+  width: 260px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: $yellow;
+  color: $dark;
+  text-align: center;
+  padding: 15px 54px;
+  text-transform: uppercase;
+  position: relative;
+  border: 1px solid transparent;
+  transition: all .35s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: $white;
+    transition: all .35s;
+  }
+}
+
+.button span {
+  position: relative;
+  z-index: 2;
+}
+
+.button:hover {
+  color: $dark;
+  border: 1px solid $yellow;
+}
+
+.button:hover::after {
+  width: 100%;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    margin: 0 5px;
+  }
+
+  &__img {
+    width: 25px;
+    height: 25px;
+    fill: $white;
+    transition: all 0.3s;
+    &:hover {
+      fill: $yellow;
+    }
+  }
+}

@@ -4,9 +4,6 @@
 @import 'global';
 @import 'libs';
 
-@import 'media';
-
-
 .header {
   background-image: url("../images/header__bg.jpg");
   background-size: cover;
@@ -59,48 +56,10 @@
   }
 
   &__social {
-    padding: 70px 0 20px 70px;
+    padding: 70px 0 20px 55px;
   }
 }
 
-.phone {
-  font-size: 36px;
-  line-height: 54px;
-  font-weight: $fw-400;
-}
-
-.button {
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  padding: 14px 54px 15px;
-  background-color: $yellow;
-  color: $black;
-  transition: all 0.5s;
-}
-
-.button:hover {
-  color: $black;
-  background-color: $white;
-}
-
-.social {
-  display: flex;
-  align-items: center;
-
-  &__item {
-    margin: 0 5px;
-  }
-  &__img {
-    width: 25px;
-    height: 25px;
-    fill: $white;
-    transition: all 0.3s;
-    &:hover {
-      fill: $yellow;
-    }
-  }
-}
 
 .carousel {
   padding-top: 300px;
@@ -116,12 +75,11 @@
     text-align: center;
     cursor: pointer;
     transition: all 0.7s;
-  }
-
-  &__box:hover {
-    color: $white;
-    background-color: $dark;
-    border-color: $dark;
+    &:hover {
+      color: $white;
+      background-color: $dark;
+      border-color: $dark;
+    }
   }
 
   &__img {
@@ -130,33 +88,31 @@
   }
 
   &__title {
-    font-weight: 300;
+    font-weight: $fw-300;
     margin-bottom: 5px;
     text-transform: uppercase;
   }
+  & .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    list-style: none;
+  }
+  & .slick-dots button {
+    font-size: 0;
+    border: none;
+    margin: 0 10px;
+    background-color: $gray;
+    width: 50px;
+    height: 1px;
+    cursor: pointer;
+  }
+  & .slick-active button {
+    background-color: $dark;
+    height: 3px;
+  }
 }
 
-.carousel .slick-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  list-style: none;
-}
-
-.carousel .slick-dots button {
-  font-size: 0;
-  border: none;
-  margin: 0 10px;
-  background-color: $gray;
-  width: 50px;
-  height: 1px;
-  cursor: pointer;
-}
-
-.carousel .slick-active button {
-  background-color: $dark;
-  height: 3px;
-}
 
 .services {
   padding-top: 124px;
@@ -169,6 +125,7 @@
     width: 505px;
     margin-right: 96px;
   }
+
   &__title {
     color: $accent;
     font-size: 18px;
@@ -180,8 +137,13 @@
   &__text {
     margin-bottom: 57px;
   }
+
   &__text p:not(:last-child) {
     margin-bottom: 12px;
+  }
+  
+  &__button {
+    color: $white;
   }
 
   &__list {
@@ -225,35 +187,12 @@
     color: $accent;
   }
 
-  &__item_title {
+  &__name {
     font-size: 24px;
     font-weight: $fw-300;
   }
 }
 
-.button--decor {
-  margin-top: -7px;
-  color: $white;
-  border: 1px solid $yellow;
-  position: relative;
-}
-
-.button--decor::after {
-  content: 'ЖМИ';
-  color: $gray;
-  margin-left: 130px;
-  position: absolute;
-}
-
-.button--decor::before {
-  content: '';
-  width: 80px;
-  height: 2px;
-  background-color: $gray;
-  position: absolute;
-  right: -65px;
-  top: 20px;
-}
 
 .benefits {
   padding-top: 124px;
@@ -276,17 +215,16 @@
     color: $black;
     position: relative;
     text-align: right;
-  }
-
-  &__item::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: $dark;
-    right: 0;
-    bottom: 6px;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $dark;
+      right: 0;
+      bottom: 6px;
+    }
   }
 
   &__item:nth-child(1),
@@ -335,17 +273,17 @@
   height: 65px;
   width: 200px;
   position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url("../images/popup.svg");
+    top: 20px;
+    left: 25px;
+  }
 }
 
-.video-popup::before {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  background-image: url("../images/popup.svg");
-  top: 20px;
-  left: 25px;
-}
 
 .reviews {
   margin-top: 124px;
@@ -355,16 +293,15 @@
 
   &__title {
     color: $white;
-  }
-
-  &__title::after {
-    content: '';
-    width: 80px;
-    height: 3px;
-    background-color: $white;
-    position: absolute;
-    top: 27px;
-    margin-left: 20px;
+    &::after {
+      content: '';
+      width: 80px;
+      height: 3px;
+      background-color: $white;
+      position: absolute;
+      top: 27px;
+      margin-left: 20px;
+    }
   }
 
   &__slider {
@@ -421,6 +358,7 @@
   }
 }
 
+
 .contacts {
   padding-top: 124px;
 
@@ -453,10 +391,9 @@
     margin-bottom: 16px;
     margin-left: 53px;
     text-align: left;
-  }
-
-  &__title::after {
-    background-color: $white;
+    &::after {
+      background-color: $white;
+    }
   }
 
   &__input {
@@ -482,12 +419,11 @@
   }
 
   &__btn {
-    border: none;
-    color: $black;
+    margin: 0 auto;
     margin-top: 78px;
-    cursor: pointer;
   }
 }
+
 
 .footer {
   background-color: $dark;
@@ -501,66 +437,67 @@
   }
 }
 
+
 @media(max-width: 1200px) {
-  .header__images {
-    width: 70%;
-    right: 70px;
-    bottom: -222;
+
+  .header {
+    &__images {
+      width: 70%;
+      right: 70px;
+      bottom: -222;
+    }
   }
 
-  .benefits__images {
-    width: 40%;
+  .benefits {
+    &__images {
+      width: 40%;
+    }
   }
 
-  .services__item:hover {
-    width: 450px;
+  .services {
+    &__item:hover {
+      width: 450px;
+    }
   }
 }
 
 
-
 @media(max-width: 992px) {
+
+  .phone {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
   .header {
-  
     &__title {
       font-size: 54px;
       line-height: 74px;
     }
-  
     &__subtitle {
       font-size: 24px;
       line-height: 36px;
     }
-  
     &__social {
       padding: 30px 0 20px 53px;
     }
   }
   
-  .phone {
-    font-size: 24px;
-    line-height: 36px;
-  }
   .services {
-
     &__inner {
       flex-wrap: wrap;
     }
-
     &__list {
       order: -1;
       margin-bottom: 30px;
       width: 100%;
     }
-
     &__item {
       width: 100%;
     }
-
     &__item:hover {
       width: 100%;
     }
-
     &__content {
       width: 100%;
       margin-right: 0;
@@ -599,28 +536,22 @@
   }
 
   .contacts {
-   
     &__inner {
       display: block;
       text-align: center;
     }
-  
     &__list {
       margin-bottom: 30px;
     }
-  
     &__input {
       width: 100%;
     }
-  
     &__btn {
       margin-bottom: 20px;
     }
-  
     &__info-title {
       text-align: center;
     }
-  
     &__title {
       margin-left: 0;
       text-align: center;
@@ -629,8 +560,8 @@
 }
 
 
-
 @media(max-width: 768px) {
+
   .header {
     &__images {
       position: static;
@@ -640,30 +571,29 @@
       }
     }
   }
+
   .carousel {
     padding-top: 80px;
+    &__img {
+      width: 100%;
+    }
   }
-  .carousel__img {
-    width: 100%;
-  }
+
   .benefits {
     &__images {
       width: 70%;
       margin-bottom: 0;
     }
-
     &__item {
       margin-right: 0;
       text-align: left;
       padding-right: 0;
       padding-left: 26px;
     }
-
     &__item::after {
       right: auto;
       left: 0;
     }
-
     &__list {
       width: 100%;
     }
@@ -686,21 +616,26 @@
   }
 }
 
+
 @media(max-width: 576px) {
+
+  body {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
   .title {
     font-size: 28px;
     line-height: 36px;
     margin-bottom: 30px;
     text-align: center;
+    &:after {
+      display: none;
+    }
   }
 
-  .title:after {
-    display: none;
-  }
-
-  body {
-    font-size: 16px;
-    line-height: 22px;
+  .button {
+    margin: 0 auto;
   }
 
   .header {
@@ -708,7 +643,6 @@
       padding-top: 0;
       text-align: center;
     }
-
     &__social {
       padding: 30px 0 20px 0;
     }
@@ -718,35 +652,35 @@
     justify-content: center;
   }
 
-    .services,
-    .benefits,
-    .contacts {
-      padding-top: 80px;
-    }
+  .services,
+  .benefits,
+  .contacts {
+    padding-top: 80px;
+  }
 
   .services {
-
     &__item::before {
       top: 5px;
     }
-
     &__content {
       text-align: center;
     }
   }
-    .reviews {
-      margin-top: 80px;
-    }
+
+  .reviews {
+    margin-top: 80px;
+  }
 }
 
+
 @media(max-width: 480px) {
+
   .header {
     &__top {
       flex-wrap: wrap;
       justify-content: center;
       text-align: center;
     }
-  
     &__title {
       margin-bottom: 20px;
       font-size: 44px;
@@ -758,53 +692,43 @@
     margin-bottom: 20px;
     width: 100%;
   }
-    .carousel,
-    .services,
-    .benefits,
-    .contacts {
-      padding-top: 50px;
+
+  .carousel {
+    & .slick-dots {
+      margin-top: 25px;
     }
+    & .slick-dots button {
+      width: 10px;
+    }
+  }
+
+  .carousel,
+  .services,
+  .benefits,
+  .contacts {
+    padding-top: 50px;
+  }
 
   .services {
-
-
     &__item {
       padding: 10px 15px 10px 60px;
     }
-
     &__item::before {
       left: 11px;
     }
-  }
-
-  .button--decor::before {
-    right: -50px;
-  }
-
-  .button--decor::after {
-    margin-left: 110px;
-  }
-
-  .button--decor::before,
-  .button--decor::after {
-    display: none;
-  }
-
-  .services__inner,
-  .benefits,
-  .carousel {
-    margin-bottom: 50px;
-  }
-
-  .carousel .slick-dots button {
-    width: 10px;
-  }
-
-  .contacts__form {
-    padding: 50px 10px 57px;
-  }
-    .reviews {
-      margin-top: 50px;
-      padding: 40px 0;
+    &__text {
+      margin-bottom: 30px;
     }
+  }
+
+  .reviews {
+    margin-top: 50px;
+    padding: 40px 0;
+  }
+
+  .contacts {
+    &__form {
+      padding: 50px 10px 57px;
+    }
+  }
 }
