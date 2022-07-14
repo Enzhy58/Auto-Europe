@@ -1,5 +1,10 @@
 body {
-
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: $fw-300;
+  color: #2C2B2B;
+  background-color: #fff;
+  font-family: $oswald, sans-serif;
 }
 
 .sr-only {
@@ -17,6 +22,6 @@ body {
 
 .container {
   max-width: 1200px;
-  padding: 0 15px;
+  padding: 0 10px;
   margin: 0 auto;
 }
