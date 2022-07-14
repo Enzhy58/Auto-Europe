@@ -25,3 +25,24 @@ body {
   padding: 0 10px;
   margin: 0 auto;
 }
+
+.title {
+  color: #014469;
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  position: relative;
+  text-align: left;
+}
+
+.title::after {
+  content: '';
+  width: 80px;
+  height: 3px;
+  background-color: #014469;
+  position: absolute;
+  top: 27px;
+  margin-left: 20px;
+}
