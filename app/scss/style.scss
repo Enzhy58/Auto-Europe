@@ -50,6 +50,7 @@
     right: -23px;
     bottom: -265px;
     transition: all 1s;
+
     &:hover {
       transform: translate(-20%, 10%);
     }
@@ -61,7 +62,7 @@
 }
 
 
-.carousel {
+.auto {
   padding-top: 300px;
 
   &__inner {
@@ -75,6 +76,7 @@
     text-align: center;
     cursor: pointer;
     transition: all 0.7s;
+
     &:hover {
       color: $white;
       background-color: $dark;
@@ -92,12 +94,14 @@
     margin-bottom: 5px;
     text-transform: uppercase;
   }
+
   & .slick-dots {
     display: flex;
     justify-content: center;
     margin-top: 50px;
     list-style: none;
   }
+
   & .slick-dots button {
     font-size: 0;
     border: none;
@@ -107,12 +111,64 @@
     height: 1px;
     cursor: pointer;
   }
+
   & .slick-active button {
     background-color: $dark;
     height: 3px;
   }
-}
 
+  &__info {
+    padding-top: 100px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    max-width: 460px;
+    width: 100%;
+    margin-right: 80px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    width: 63px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__unfill {
+    max-width: 460px;
+    width: 100%;
+    height: 24px;
+    background-color: $gray;
+    position: relative;
+  }
+
+  &__fill {
+    height: 100%;
+    background-color: $accent;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__text {
+    max-width: 504px;
+  }
+}
 
 .services {
   padding-top: 124px;
@@ -141,7 +197,7 @@
   &__text p:not(:last-child) {
     margin-bottom: 12px;
   }
-  
+
   &__button {
     color: $white;
   }
@@ -215,6 +271,7 @@
     color: $black;
     position: relative;
     text-align: right;
+
     &::after {
       content: '';
       position: absolute;
@@ -273,6 +330,7 @@
   height: 65px;
   width: 200px;
   position: relative;
+
   &::before {
     content: '';
     position: absolute;
@@ -293,6 +351,7 @@
 
   &__title {
     color: $white;
+
     &::after {
       content: '';
       width: 80px;
@@ -391,6 +450,7 @@
     margin-bottom: 16px;
     margin-left: 53px;
     text-align: left;
+
     &::after {
       background-color: $white;
     }
@@ -474,30 +534,45 @@
       font-size: 54px;
       line-height: 74px;
     }
+
     &__subtitle {
       font-size: 24px;
       line-height: 36px;
     }
+
     &__social {
       padding: 30px 0 20px 53px;
     }
   }
-  
+
+  .auto {
+    &__list {
+      margin-right: 40px;
+    }
+    &__text {
+      max-width: 350px;
+    }
+  }
+
   .services {
     &__inner {
       flex-wrap: wrap;
     }
+
     &__list {
       order: -1;
       margin-bottom: 30px;
       width: 100%;
     }
+
     &__item {
       width: 100%;
     }
+
     &__item:hover {
       width: 100%;
     }
+
     &__content {
       width: 100%;
       margin-right: 0;
@@ -530,6 +605,7 @@
       margin-left: 0;
       max-width: 600px;
     }
+
     .video-popup {
       margin: 0 auto;
     }
@@ -540,18 +616,23 @@
       display: block;
       text-align: center;
     }
+
     &__list {
       margin-bottom: 30px;
     }
+
     &__input {
       width: 100%;
     }
+
     &__btn {
       margin-bottom: 20px;
     }
+
     &__info-title {
       text-align: center;
     }
+
     &__title {
       margin-left: 0;
       text-align: center;
@@ -566,16 +647,29 @@
     &__images {
       position: static;
       width: 100%;
+
       &:hover {
         transform: translate(0, 0);
       }
     }
   }
 
-  .carousel {
+  .auto {
     padding-top: 80px;
+
     &__img {
       width: 100%;
+    }
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__list {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    &__text {
+      max-width: 100%;
     }
   }
 
@@ -584,16 +678,19 @@
       width: 70%;
       margin-bottom: 0;
     }
+
     &__item {
       margin-right: 0;
       text-align: left;
       padding-right: 0;
       padding-left: 26px;
     }
+
     &__item::after {
       right: auto;
       left: 0;
     }
+
     &__list {
       width: 100%;
     }
@@ -607,7 +704,7 @@
       padding: 20px 0;
       text-align: center;
     }
-  
+
     &__social {
       width: 100%;
       justify-content: center;
@@ -629,6 +726,7 @@
     line-height: 36px;
     margin-bottom: 30px;
     text-align: center;
+
     &:after {
       display: none;
     }
@@ -643,6 +741,7 @@
       padding-top: 0;
       text-align: center;
     }
+
     &__social {
       padding: 30px 0 20px 0;
     }
@@ -652,6 +751,7 @@
     justify-content: center;
   }
 
+  .auto__info,
   .services,
   .benefits,
   .contacts {
@@ -662,6 +762,7 @@
     &__item::before {
       top: 5px;
     }
+
     &__content {
       text-align: center;
     }
@@ -681,6 +782,7 @@
       justify-content: center;
       text-align: center;
     }
+
     &__title {
       margin-bottom: 20px;
       font-size: 44px;
@@ -693,16 +795,18 @@
     width: 100%;
   }
 
-  .carousel {
+  .auto {
     & .slick-dots {
       margin-top: 25px;
     }
+
     & .slick-dots button {
       width: 10px;
     }
   }
 
-  .carousel,
+  .auto,
+  .auto__info,
   .services,
   .benefits,
   .contacts {
@@ -713,9 +817,11 @@
     &__item {
       padding: 10px 15px 10px 60px;
     }
+
     &__item::before {
       left: 11px;
     }
+
     &__text {
       margin-bottom: 30px;
     }

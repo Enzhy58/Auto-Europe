@@ -1,5 +1,5 @@
 $(function () {
-  $('.carousel__inner').slick({
+  $('.auto__inner').slick({
     arrows: false,
     dots: true,
     slidesToShow: 3,
