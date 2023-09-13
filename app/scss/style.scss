@@ -17,56 +17,53 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 60px;
   }
 
   &__content {
-    padding-top: 60px;
     position: relative;
+  }
+
+  &__title,
+  &__subtitle {
+    font-weight: 400;
+    text-transform: uppercase;
   }
 
   &__title {
     font-size: 72px;
-    font-weight: 400;
     line-height: 107px;
-    text-transform: uppercase;
   }
 
   &__subtitle {
     font-size: 36px;
     line-height: 54px;
-    font-weight: $fw-400;
-    margin-bottom: 30px;
-    text-transform: uppercase;
   }
 
   &__text {
     margin-bottom: 30px;
-    max-width: 800px;
-    font-weight: $fw-300;
   }
 
   &__images {
     position: absolute;
     right: -23px;
     bottom: -265px;
-    transition: all 1s;
-
-    &:hover {
-      transform: translate(-20%, 10%);
-    }
   }
 
   &__social {
     padding: 70px 0 20px 55px;
   }
+
 }
 
 
 .auto {
-  padding-top: 300px;
+  margin-top: 300px;
 
   &__inner {
-    margin: 0 -7px;
+    margin-left: -7px;
+    margin-right: -7px;
+    margin-bottom: 100px;
   }
 
   &__box {
@@ -82,46 +79,45 @@
       background-color: $dark;
       border-color: $dark;
     }
+
   }
 
   &__img {
-    max-width: 100%;
     margin-bottom: 23px;
   }
 
   &__title {
-    font-weight: $fw-300;
+    font-weight: 300;
     margin-bottom: 5px;
     text-transform: uppercase;
   }
 
-  & .slick-dots {
+  .slick-dots {
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    list-style: none;
+
+    button {
+      font-size: 0;
+      border: none;
+      margin: 0 10px;
+      background-color: $gray;
+      width: 50px;
+      height: 1px;
+    }
+
   }
 
-  & .slick-dots button {
-    font-size: 0;
-    border: none;
-    margin: 0 10px;
-    background-color: $gray;
-    width: 50px;
-    height: 1px;
-    cursor: pointer;
-  }
+  .slick-active {
 
-  & .slick-active button {
-    background-color: $dark;
-    height: 3px;
+    button {
+      background-color: $dark;
+      height: 3px;
+    }
+
   }
 
   &__info {
-    padding-top: 100px;
-  }
-
-  &__wrapper {
     display: flex;
     justify-content: space-between;
   }
@@ -132,61 +128,50 @@
     margin-right: 80px;
   }
 
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-
   &__name {
-    width: 63px;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 1;
     text-transform: uppercase;
   }
 
   &__unfill {
-    max-width: 460px;
-    width: 100%;
     height: 24px;
     background-color: $gray;
-    position: relative;
   }
 
   &__fill {
     height: 100%;
     background-color: $accent;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
   &__text {
     max-width: 504px;
   }
+
 }
 
 .services {
-  padding-top: 124px;
 
   &__inner {
     display: flex;
   }
 
   &__content {
-    width: 505px;
+    max-width: 505px;
     margin-right: 96px;
   }
 
   &__title {
     color: $accent;
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: $fw-300;
+    font-weight: 300;
     margin-bottom: 12px;
   }
 
@@ -194,28 +179,19 @@
     margin-bottom: 57px;
   }
 
-  &__text p:not(:last-child) {
-    margin-bottom: 12px;
-  }
-
   &__button {
     color: $white;
   }
 
   &__list {
-    list-style: none;
     counter-reset: my-counter;
   }
 
   &__item {
     counter-increment: my-counter;
-    border: 1px solid $gray;
     margin-bottom: 12px;
-    width: 450px;
     padding: 10px 15px 10px 113px;
     position: relative;
-    border: 2px solid transparent;
-    transition: all 0.5s;
   }
 
   &__item::before {
@@ -224,36 +200,21 @@
     left: 20px;
     font-size: 36px;
     line-height: 54px;
-    font-weight: $fw-400;
+    font-weight: 400;
     color: $gray;
     transform: rotate(270deg);
-    transition: all 0.5s;
-  }
-
-  &__item:hover {
-    border: 2px solid $accent;
-    width: 500px;
-  }
-
-  &__item:hover &__item_title {
-    color: $accent;
-  }
-
-  &__item:hover::before {
-    color: $accent;
   }
 
   &__name {
     font-size: 24px;
-    font-weight: $fw-300;
   }
+
 }
 
 
 .benefits {
-  padding-top: 124px;
 
-  &__items {
+  &__box {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -280,7 +241,7 @@
       border-radius: 50%;
       background-color: $dark;
       right: 0;
-      bottom: 6px;
+      bottom: 2px;
     }
   }
 
@@ -305,7 +266,6 @@
 
   &__content {
     max-width: 300px;
-    text-align: right;
   }
 
   &__text {
@@ -317,6 +277,7 @@
     max-width: 267px;
     margin-left: auto;
   }
+
 }
 
 .video-popup {
@@ -337,14 +298,17 @@
     width: 25px;
     height: 25px;
     background-image: url("../images/popup.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     top: 20px;
     left: 25px;
   }
+
 }
 
 
 .reviews {
-  margin-top: 124px;
   padding: 100px 0;
   background-color: $dark;
   color: $white;
@@ -353,13 +317,7 @@
     color: $white;
 
     &::after {
-      content: '';
-      width: 80px;
-      height: 3px;
       background-color: $white;
-      position: absolute;
-      top: 27px;
-      margin-left: 20px;
     }
   }
 
@@ -370,56 +328,49 @@
   &__item {
     border: 1px solid $yellow;
     padding: 45px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     max-width: 270px;
     min-height: 350px;
-    text-align: center;
   }
 
   &__name {
     margin-bottom: 40px;
-    font-weight: $fw-500;
+    font-weight: 500;
     font-size: 24px;
     line-height: 36px;
-    color: $white;
     display: block;
   }
 
-  &__slider .slick-dots button {
-    background-color: $yellow;
-    border: none;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    padding: 0;
-    font-size: 0;
-    cursor: pointer;
-  }
-
-  &__slider .slick-active button {
-    width: 16px;
-    height: 16px;
-  }
-
-  &__slider .slick-dots {
+  .slick-dots {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 35px;
+
+    button {
+      background-color: $yellow;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      line-height: 12px;
+      margin: 0 5px;
+      font-size: 0;
+    }
+
   }
 
-  &__slider button {
-    margin: 0 5px;
-    line-height: 12px;
+  .slick-active {
+
+    button {
+      width: 16px;
+      height: 16px;
+    }
+
   }
+
 }
 
 
 .contacts {
-  padding-top: 124px;
 
   &__inner {
     display: flex;
@@ -427,37 +378,27 @@
     align-items: center;
   }
 
-  &__list {
-    list-style: none;
-  }
-
   &__item {
     margin-bottom: 20px;
-  }
-
-  &__item_title {
-    color: $accent;
   }
 
   &__form {
     background-color: $dark;
     padding: 50px 75px 57px;
-    text-align: center;
   }
 
-  &__title {
+  &__form-title {
     color: $white;
     margin-bottom: 16px;
     margin-left: 53px;
-    text-align: left;
 
     &::after {
       background-color: $white;
     }
+    
   }
 
   &__input {
-    background-color: transparent;
     width: 450px;
     height: 75px;
     color: $white;
@@ -471,17 +412,15 @@
 
   &__input::placeholder {
     font-family: $oswald, sans-serif;
-    text-align: center;
     font-size: 18px;
-    font-weight: 300;
     line-height: 27px;
     color: $gray;
   }
 
   &__btn {
-    margin: 0 auto;
-    margin-top: 78px;
+    margin: 78px auto 0 auto;
   }
+
 }
 
 
@@ -489,36 +428,35 @@
   background-color: $dark;
 
   &__inner {
-    height: 100px;
+    padding: 30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: $white;
   }
+
 }
 
 
-@media(max-width: 1200px) {
+@media(max-width: 1250px) {
 
   .header {
+
     &__images {
       width: 70%;
       right: 70px;
-      bottom: -222;
     }
+
   }
 
   .benefits {
+
     &__images {
       width: 40%;
     }
+
   }
 
-  .services {
-    &__item:hover {
-      width: 450px;
-    }
-  }
 }
 
 
@@ -530,6 +468,7 @@
   }
 
   .header {
+
     &__title {
       font-size: 54px;
       line-height: 74px;
@@ -543,18 +482,24 @@
     &__social {
       padding: 30px 0 20px 53px;
     }
+
   }
 
   .auto {
+    margin-top: 80px;
+
     &__list {
       margin-right: 40px;
     }
+
     &__text {
       max-width: 350px;
     }
+
   }
 
   .services {
+
     &__inner {
       flex-wrap: wrap;
     }
@@ -562,31 +507,17 @@
     &__list {
       order: -1;
       margin-bottom: 30px;
-      width: 100%;
-    }
-
-    &__item {
-      width: 100%;
-    }
-
-    &__item:hover {
-      width: 100%;
     }
 
     &__content {
-      width: 100%;
       margin-right: 0;
     }
+
   }
 
   .benefits {
-    &__content {
-      width: 100%;
-      max-width: 600px;
-      margin-top: 30px;
-    }
 
-    &__items {
+    &__box {
       flex-wrap: wrap;
       justify-content: space-around;
     }
@@ -596,22 +527,26 @@
       margin-bottom: 65px;
     }
 
+    &__content {
+      max-width: 600px;
+    }
+
     &__text {
       text-align: center;
     }
 
     &__text+&__text {
-      width: 100%;
-      margin-left: 0;
       max-width: 600px;
     }
 
     .video-popup {
       margin: 0 auto;
     }
+
   }
 
   .contacts {
+
     &__inner {
       display: block;
       text-align: center;
@@ -625,62 +560,70 @@
       width: 100%;
     }
 
-    &__btn {
-      margin-bottom: 20px;
-    }
-
     &__info-title {
       text-align: center;
     }
 
-    &__title {
+    &__form-title {
       margin-left: 0;
       text-align: center;
     }
+
   }
+
 }
+
 
 
 @media(max-width: 768px) {
 
   .header {
+
+    &__top {
+      padding: 30px 0 30px;
+    }
+
     &__images {
       position: static;
       width: 100%;
-
-      &:hover {
-        transform: translate(0, 0);
-      }
     }
+
   }
 
   .auto {
-    padding-top: 80px;
 
     &__img {
       width: 100%;
     }
-    &__wrapper {
+
+    &__info {
       flex-direction: column;
       align-items: center;
     }
+
     &__list {
       margin-right: 0;
       margin-bottom: 30px;
     }
+
     &__text {
       max-width: 100%;
     }
+
   }
 
   .benefits {
+
     &__images {
       width: 70%;
       margin-bottom: 0;
     }
 
+    &__list {
+      width: 100%;
+    }
+
     &__item {
-      margin-right: 0;
       text-align: left;
       padding-right: 0;
       padding-left: 26px;
@@ -691,96 +634,64 @@
       left: 0;
     }
 
-    &__list {
-      width: 100%;
-    }
   }
 
   .footer {
+
     &__inner {
       flex-direction: column;
-      justify-content: center;
-      height: auto;
       padding: 20px 0;
-      text-align: center;
     }
 
     &__social {
-      width: 100%;
-      justify-content: center;
       margin: 25px 0;
     }
+
   }
+
 }
 
 
 @media(max-width: 576px) {
 
-  body {
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  .title {
-    font-size: 28px;
-    line-height: 36px;
-    margin-bottom: 30px;
-    text-align: center;
-
-    &:after {
-      display: none;
-    }
-  }
-
-  .button {
-    margin: 0 auto;
-  }
-
   .header {
+
     &__content {
-      padding-top: 0;
       text-align: center;
     }
 
     &__social {
-      padding: 30px 0 20px 0;
+      padding: 30px 0 0 0;
+      justify-content: center;
     }
+
   }
 
-  .social {
-    justify-content: center;
-  }
+  .auto {
 
-  .auto__info,
-  .services,
-  .benefits,
-  .contacts {
-    padding-top: 80px;
+    &__inner {
+      margin-bottom: 50px;
+    }
+
   }
 
   .services {
-    &__item::before {
-      top: 5px;
-    }
 
     &__content {
       text-align: center;
     }
+
   }
 
-  .reviews {
-    margin-top: 80px;
-  }
 }
 
 
 @media(max-width: 480px) {
 
   .header {
+
     &__top {
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: center;
+      flex-direction: column;
     }
 
     &__title {
@@ -788,53 +699,49 @@
       font-size: 44px;
       line-height: 50px;
     }
+
   }
 
   .logo {
     margin-bottom: 20px;
-    width: 100%;
   }
 
   .auto {
-    & .slick-dots {
+
+    .slick-dots {
       margin-top: 25px;
     }
 
-    & .slick-dots button {
-      width: 10px;
+    .slick-dots {
+      button {
+        width: 10px;
+      }
     }
-  }
 
-  .auto,
-  .auto__info,
-  .services,
-  .benefits,
-  .contacts {
-    padding-top: 50px;
   }
 
   .services {
+
     &__item {
-      padding: 10px 15px 10px 60px;
+      padding: 10px 15px 10px 70px;
     }
 
     &__item::before {
       left: 11px;
     }
 
-    &__text {
-      margin-bottom: 30px;
-    }
   }
 
   .reviews {
-    margin-top: 50px;
     padding: 40px 0;
   }
 
   .contacts {
+
     &__form {
       padding: 50px 10px 57px;
     }
+
   }
+
 }

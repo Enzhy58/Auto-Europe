@@ -1,4 +1,5 @@
 $(function () {
+
   $('.auto__inner').slick({
     arrows: false,
     dots: true,
@@ -18,6 +19,7 @@ $(function () {
       },
     ]
   });
+
   $('.reviews__slider').slick({
     arrows: false,
     dots: true,
@@ -44,4 +46,5 @@ $(function () {
       },
     ]
   });
+  
 });

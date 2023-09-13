@@ -1,7 +1,7 @@
 body {
   font-size: 18px;
   line-height: 27px;
-  font-weight: $fw-300;
+  font-weight: 300;
   color: #2C2B2B;
   background-color: $white;
   font-family: $oswald, sans-serif;
@@ -26,31 +26,34 @@ body {
   margin: 0 auto;
 }
 
+.page-section {
+  margin-bottom: 124px;
+}
+
 .title {
   color: $accent;
   font-size: 36px;
   line-height: 54px;
-  font-weight: $fw-400;
+  font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 50px;
   position: relative;
-  text-align: left;
-}
 
-.title::after {
-  content: '';
-  width: 80px;
-  height: 3px;
-  background-color: $accent;
-  position: absolute;
-  top: 27px;
-  margin-left: 20px;
+  &::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: $accent;
+    position: absolute;
+    top: 27px;
+    margin-left: 20px;
+  }
 }
 
 .phone {
   font-size: 36px;
   line-height: 54px;
-  font-weight: $fw-400;
+  font-weight: 400;
 }
 
 .button {
@@ -78,6 +81,7 @@ body {
     background-color: $white;
     transition: all .35s;
   }
+
 }
 
 .button span {
@@ -96,7 +100,6 @@ body {
 
 .social {
   display: flex;
-  align-items: center;
 
   &__item {
     margin: 0 5px;
@@ -107,8 +110,48 @@ body {
     height: 25px;
     fill: $white;
     transition: all 0.3s;
+
     &:hover {
       fill: $yellow;
     }
+
   }
+
+}
+
+@media(max-width: 576px) {
+
+  body {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .page-section {
+    margin-bottom: 80px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+
+    &:after {
+      display: none;
+    }
+    
+  }
+
+  .button {
+    margin: 0 auto;
+  }
+
+}
+
+@media(max-width: 576px) {
+
+  .page-section {
+    margin-bottom: 50px;
+  }
+
 }
