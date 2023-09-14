@@ -22,6 +22,7 @@
 
   &__content {
     position: relative;
+    max-width: 780px;
   }
 
   &__title,
@@ -46,7 +47,7 @@
 
   &__images {
     position: absolute;
-    right: -23px;
+    left: 390px;
     bottom: -265px;
   }
 
@@ -443,8 +444,9 @@
   .header {
 
     &__images {
-      width: 70%;
-      right: 70px;
+      width: 90%;
+      left: 247px;
+      bottom: -230px;
     }
 
   }
@@ -481,6 +483,11 @@
 
     &__social {
       padding: 30px 0 20px 53px;
+    }
+
+    &__images {
+      position: static;
+      width: 100%;
     }
 
   }
@@ -581,11 +588,6 @@
 
     &__top {
       padding: 30px 0 30px;
-    }
-
-    &__images {
-      position: static;
-      width: 100%;
     }
 
   }
